@@ -7,5 +7,11 @@ public class Main {
         System.out.println(test.toString());
         System.out.println(test.pop());
         System.out.println(test.peek());
+        System.out.println(test);
+        for(int i = 0 ; i < 11 ; i++){
+            test.pop();
+            System.out.println(test);
+        }
+        System.out.println(test);
     }
 }

@@ -31,6 +31,10 @@ public class ListStack implements DStack{
     public double pop() {
         if (isEmpty()) {
             throw new EmptyStackException();
+        } else if (last.prev == null) {
+            double hold = last.data;
+            last = null;
+            return hold;
         } else {
             double hold = last.data;
             last = last.prev;
@@ -49,21 +53,34 @@ public class ListStack implements DStack{
         }
     }
 
-    //Returns a string representing the data contained in the stack.
     public String toString(){
-        String out = last.data+"]";
-        return stringIt(last.prev, out);
-    }
-
-    //Private helper method to recurse through the stack. Accepts Node parameter current which is the current node
-    //and a String out which will be returned later.
-    private String stringIt(Node current, String out){
-        if (current.prev == null){
-            return "["+out;
-        } else {
-            return stringIt(current.prev, current.data + ", " + out);
+        if (isEmpty()) {
+            return "[]";
+        }else {
+            String out = "]";
+            Node current = last;
+            while (current.prev != null) {
+                out = ", " + current.data + out;
+                current = current.prev;
+            }
+            return "[" + current.data + out;
         }
     }
+//    //Returns a string representing the data contained in the stack.
+//    public String toString(){
+//        String out = last.data+"]";
+//        return stringIt(last.prev, out);
+//    }
+//
+//    //Private helper method to recurse through the stack. Accepts Node parameter current which is the current node
+//    //and a String out which will be returned later.
+//    private String stringIt(Node current, String out){
+//        if (current.prev == null){
+//            return "[" + current.data + ", " + out;
+//        } else {
+//            return stringIt(current.prev, current.data + ", " + out);
+//        }
+//    }
 
     class Node{
         private Node next;
