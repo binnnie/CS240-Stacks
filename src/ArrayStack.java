@@ -49,7 +49,7 @@ public class ArrayStack implements DStack{
 
     //Private method to extend the length of the data array field by a factor of 2.
     private void extend(){
-        double[] hold = new double[data.length*2];
+        double[] hold = new double[size*2];
         for (int i = 0; i <= size-1; i++){
             hold[i] = data[i];
         }
