@@ -1,3 +1,12 @@
+/*
+   Brandon Dixon, Minh Huynh, Carter Schmidt
+   04/17/2018
+   CS240
+   ArrayStack.java
+   
+   A stack data structure using an array implementation.
+*/
+
 import java.util.EmptyStackException;
 
 public class ArrayStack implements DStack{

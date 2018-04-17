@@ -1,3 +1,7 @@
+Brandon Dixon, Minh Huynh, Carter Schmidt
+
+WRITE-UP
+
 1. We created a Main.java file to test the Stacks. We pushed and popped multiple times, tested to make sure the data was correct
 at each step. We also used the Reverse.java file with sox to try reversing sound files.
 2. a. with 1 million: 20 times
